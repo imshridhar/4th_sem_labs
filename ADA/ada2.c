@@ -1,6 +1,4 @@
-// program 2
-// Design and implement C/C++ Program to find Minimum Cost Spanning Tree of a given
-// connected undirected graph using Prim's algorithm.
+//2
 #include<stdio.h>
 #define INF 999
 int prim(int c[10][10],int n,int s)

@@ -1,5 +1,4 @@
-// 3a.Design and implement C/C++ Program to solve All-Pairs Shortest Paths problem using Floyd's
-// algorithm. 
+// 3a
 
 #include<stdio.h>
 #define INF 999
