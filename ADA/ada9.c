@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
 void selectionSort(int arr[], int n) {
     int i, j, minIdx, temp;
     for (i = 0; i < n - 1; i++) {
@@ -17,7 +16,6 @@ void selectionSort(int arr[], int n) {
         arr[i] = temp;
     }
 }
-
 void plotGraph(int n_values[], double time_taken[], int num_tests) {
     FILE *gnuplot = popen("gnuplot -persistent", "w");
     if (gnuplot == NULL) {
@@ -33,14 +31,13 @@ void plotGraph(int n_values[], double time_taken[], int num_tests) {
         fprintf(gnuplot, "%d %lf\n", n_values[i], time_taken[i]);
     }
     fprintf(gnuplot, "e\n");
-    pclose(gnuplot); // Use pclose for popen
+    pclose(gnuplot); 
 }
-
-int main() {
+ int main() {
     srand(time(NULL));
     int n_values[] = {5000, 10000, 15000, 20000, 25000};
     int num_tests = sizeof(n_values) / sizeof(n_values[0]);
-    double time_taken[num_tests]; // VLA (C99 feature)
+    double time_taken[num_tests]; 
 
     for (int test = 0; test < num_tests; test++) {
         int n = n_values[test];
@@ -49,7 +46,7 @@ int main() {
             printf("Memory allocation failed!\n");
             return 1;
         }
-        for (int i = 0; i < n; i++) { // Inlined generateRandomArray
+        for (int i = 0; i < n; i++) { 
             arr[i] = rand() % 10000;
         }
         

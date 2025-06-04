@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
-void merge(int arr[], int left, int mid, int right) {
+ void merge(int arr[], int left, int mid, int right) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
     int L[n1], R[n2]; 
@@ -25,8 +24,7 @@ void merge(int arr[], int left, int mid, int right) {
     while (j < n2) 
         arr[k++] = R[j++];
 }
-
-void mergeSort(int arr[], int left, int right) {
+ void mergeSort(int arr[], int left, int right) {
     if (left < right) {
         int mid = left + (right - left) / 2;
         mergeSort(arr, left, mid);
@@ -34,8 +32,7 @@ void mergeSort(int arr[], int left, int right) {
         merge(arr, left, mid, right);
     }
 }
-
-void plotGraph(int n_values[], double time_taken[], int num_tests) {
+ void plotGraph(int n_values[], double time_taken[], int num_tests) {
     FILE *gnuplot = popen("gnuplot -persistent", "w");
     if (gnuplot == NULL) {
         fprintf(stderr, "Error opening gnuplot\n");
@@ -52,8 +49,7 @@ void plotGraph(int n_values[], double time_taken[], int num_tests) {
     fprintf(gnuplot, "e\n");
     fclose(gnuplot);
 }
-
-int main() {
+ int main() {
     srand(time(NULL));
     int n_values[] = {5000, 10000, 15000, 20000, 25000};
     int num_tests = sizeof(n_values) / sizeof(n_values[0]);

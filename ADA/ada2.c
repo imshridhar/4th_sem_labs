@@ -46,18 +46,4 @@ void main()
     res=prim(c,n,s);
     printf("\nCost=%d",res);
     getchar();
-}
-
-// output
-// Enter n value:4
-// Enter the graph data:
-// 0 10 20 0
-// 10 0 30 5
-// 20 30 0 15
-// 0 5 15 0
-// Enter the souce node:1
-// 1 -> 1 sum=0
-// 1 -> 2 sum=10
-// 2 -> 4 sum=15
-// 2 -> 3 sum=45
-// Cost=45
+ }
