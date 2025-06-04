@@ -60,22 +60,4 @@ int main()
             scanf("%d", & c[i][j]);
     kruskal(n);
     return 0;
-}
-
-
-// Output:
-// Enter the n value:6
-// Enter the graph data:
-// 0 3 1 6 0 0
-// 3 0 5 0 3 0
-// 1 5 0 5 6 4
-// 6 0 5 0 0 2
-// 0 3 6 0 0 6
-// 0 0 4 2 6 0
-// Cost of spanning tree is=12
-// Edges of spanning tree are: 
-// 1 -> 3
-// 4 -> 6
-// 4 -> 5
-// 3 -> 6
-// 2 -> 5
+ }
