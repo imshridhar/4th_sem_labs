@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{amsthm}
+\usepackage{lipsum}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary} 
+\newtheorem{lemma}[theorem]{Lemma} 
+
+\begin{document}
+	
+	\section{Introduction}
+	
+	\begin{theorem}
+		\lipsum[6]
+		This is a theorem.
+	\end{theorem}
+	
+	\begin{definition}
+		This is a definition.
+	\end{definition}
+	
+	\begin{corollary}
+		This is a corollary.
+	\end{corollary}
+	
+	\begin{lemma}
+		This is a lemma.
+	\end{lemma}
+	
+	\section{Another Section}
+	
+	\begin{theorem}
+		Another theorem.
+	\end{theorem}
+	
+\end{document}
